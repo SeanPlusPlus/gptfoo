@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
-const title = "gptfoo"
-const description = "GPT checker"
+const title = "GPT Foo"
+const description = "Test whether a block of text was written by an AI or a human"
 
 export default function Header() {
   return (

@@ -10,7 +10,7 @@ export default (state, action) => {
     case 'UPDATE_INPUT_TEXT':
       return {
         ...state,
-        inuptText: action.payload,
+        inputText: action.payload,
       }
     default:
       return state;

@@ -1,7 +1,7 @@
 import Header from '../components/Header'
 import Input from '../components/Input'
 
-const title = 'gptfoo'
+const title = 'GPT Foo'
 
 export default function Home() {
   return (
