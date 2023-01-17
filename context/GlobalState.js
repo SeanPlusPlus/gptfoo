@@ -11,7 +11,8 @@ const initialState = {
   alert: {
     text: 'Test whether a block of text was written by an AI or a human',
     status: 'info',
-  }
+  },
+  isSubmitting: null,
 }
 
 export const GlobalContext = createContext(initialState);
@@ -29,6 +30,13 @@ export const GlobalProvider = ({
     });
   }
 
+  function setIsSubmitting(data) {
+    dispatch({
+      type: 'UPDATE_IS_SUBMITTING',
+      payload: data
+    });
+  }
+
   useEffect(() => {
     log('state', 'rgb(217, 38, 169)', state)
   }, [state])
@@ -37,6 +45,7 @@ export const GlobalProvider = ({
       {
         ...state,
         setInputText,
+        setIsSubmitting,
       }
     } > {
       children

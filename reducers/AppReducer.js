@@ -7,11 +7,19 @@ export default (state, action) => {
   log('action', 'rgb(251, 189, 35)', action);
 
   switch (action.type) {
+
     case 'UPDATE_INPUT_TEXT':
       return {
         ...state,
         inputText: action.payload,
       }
+
+    case 'UPDATE_IS_SUBMITTING':
+      return {
+        ...state,
+        isSubmitting: action.payload,
+      }
+
     default:
       return state;
   }

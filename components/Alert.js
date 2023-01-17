@@ -12,7 +12,7 @@ export default function Alert() {
 
   return (
     <div className="w-80 md:w-[32rem] m-auto pb-4">
-      <div className={`alert alert-${alert.status} shadow-lg`}>
+      <div className={getAlertType(alert.status)}>
         <div>
           <span>
             {alert.text}
@@ -21,4 +21,16 @@ export default function Alert() {
       </div>
     </div>
   )
+}
+
+const getAlertType = (status) => {
+  if (status === 'ai') {
+    return 'rounded alert shadow-lg alert-warning'
+  }
+
+  if (status === 'human') {
+    return 'rounded alert shadow-lg alert-success'
+  }
+
+  return 'rounded alert shadow-lg alert-info'
 }
