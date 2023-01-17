@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="md:h-screen">
-        <div className="text-center h-screen">
+      <main>
+        <div className="text-center h-screen justify-between">
           <h1 className="text-3xl font-bold py-4">
             {title}
           </h1>
@@ -17,6 +17,7 @@ export default function Home() {
           <Input />
         </div>
       </main>
+
     </>
   )
 }

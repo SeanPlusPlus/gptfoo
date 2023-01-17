@@ -24,6 +24,10 @@ export default function Alert() {
 }
 
 const getAlertType = (status) => {
+  if (status === null) {
+    return 'rounded alert shadow-lg border-slate-500 border'
+  }
+
   if (status === 'ai') {
     return 'rounded alert shadow-lg alert-warning'
   }
