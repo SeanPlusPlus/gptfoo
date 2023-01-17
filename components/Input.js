@@ -30,7 +30,9 @@ export default function Input() {
   
     setIsSubmitting(false)
 
-    const { status, text } = r.data
+    console.log(r.data);
+
+    const { status, output: { text } } = r.data
 
     const a = {
       status,
