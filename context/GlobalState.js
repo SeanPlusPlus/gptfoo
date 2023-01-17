@@ -37,6 +37,13 @@ export const GlobalProvider = ({
     });
   }
 
+  function setAlert(data) {
+    dispatch({
+      type: 'UPDATE_ALERT',
+      payload: data
+    });
+  }
+
   useEffect(() => {
     log('state', 'rgb(217, 38, 169)', state)
   }, [state])
@@ -46,6 +53,7 @@ export const GlobalProvider = ({
         ...state,
         setInputText,
         setIsSubmitting,
+        setAlert,
       }
     } > {
       children

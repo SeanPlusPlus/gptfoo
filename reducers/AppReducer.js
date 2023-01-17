@@ -20,6 +20,12 @@ export default (state, action) => {
         isSubmitting: action.payload,
       }
 
+    case 'UPDATE_ALERT':
+      return {
+        ...state,
+        alert: action.payload,
+      }
+
     default:
       return state;
   }
