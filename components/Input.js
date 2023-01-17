@@ -11,6 +11,6 @@ export default function Input() {
   }
 
   return (
-    <textarea className="textarea textarea-bordered w-96" onChange={(e) => handleChange(e)}></textarea>
+    <textarea className="textarea textarea-bordered w-80 md:w-[32rem]" placeholder="Enter text here" onChange={(e) => handleChange(e)}></textarea>
   )
 }

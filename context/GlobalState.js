@@ -8,6 +8,10 @@ import { log } from '../utils/logger'
 
 const initialState = {
   inputText: null,
+  alert: {
+    text: 'Test whether a block of text was written by an AI or a human',
+    status: 'info',
+  }
 }
 
 export const GlobalContext = createContext(initialState);
