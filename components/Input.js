@@ -58,6 +58,7 @@ export default function Input() {
         placeholder="Enter text here" 
         onChange={(e) => handleChange(e)}
         value={inputText}
+        disabled={(isSubmitting === false) && "disabled"}
       ></textarea>
       <div>
         {isSubmitting === null && (
