@@ -7,7 +7,8 @@ import AppReducer from '../reducers/AppReducer';
 import { log } from '../utils/logger'
 
 const initialState = {
-  inputText: null,
+  modal: {},
+  inputText: '',
   alert: {
     text: 'Test whether a block of text was written by an AI or a human',
     status: 'info',
@@ -23,6 +24,13 @@ export const GlobalProvider = ({
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   // Actions for changing state
+  function setModal(data) {
+    dispatch({
+      type: 'UPDATE_MODAL',
+      payload: data
+    });
+  }
+
   function setInputText(data) {
     dispatch({
       type: 'UPDATE_INPUT_TEXT',
@@ -51,6 +59,7 @@ export const GlobalProvider = ({
   return ( <GlobalContext.Provider value = {
       {
         ...state,
+        setModal,
         setInputText,
         setIsSubmitting,
         setAlert,

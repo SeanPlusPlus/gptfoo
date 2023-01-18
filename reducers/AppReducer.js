@@ -8,6 +8,12 @@ export default (state, action) => {
 
   switch (action.type) {
 
+    case 'UPDATE_MODAL':
+      return {
+        ...state,
+        modal: action.payload,
+      }
+
     case 'UPDATE_INPUT_TEXT':
       return {
         ...state,

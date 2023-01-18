@@ -1,23 +1,21 @@
 import Header from '../components/Header'
+import Nav from '../components/Nav'
 import Alert from '../components/Alert'
 import Input from '../components/Input'
-
-const title = 'GPT Foo'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main>
-        <div className="text-center h-screen justify-between">
-          <h1 className="text-3xl font-bold py-4">
-            {title}
-          </h1>
+      <div className="flex flex-col h-screen justify-between">
+        <Nav />
+        <main className="mb-auto">
           <Alert />
           <Input />
-        </div>
-      </main>
-
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }

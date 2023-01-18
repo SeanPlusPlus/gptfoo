@@ -15,6 +15,15 @@ export default function Input() {
     setInputText(e.target.value)
   }
 
+  const handleClear = (e) => {
+    setInputText('')
+    setAlert({
+      text: 'Test whether a block of text was written by an AI or a human',
+      status: 'info',
+    })
+    setIsSubmitting(null)
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
 
@@ -41,8 +50,13 @@ export default function Input() {
   }
 
   return (
-    <>
-      <textarea className="textarea textarea-bordered w-80 md:w-[32rem]" placeholder="Enter text here" onChange={(e) => handleChange(e)}></textarea>
+    <div className="w-80 md:w-[32rem] m-auto pb-4 text-center">
+      <textarea
+        className="w-full textarea textarea-bordered"
+        placeholder="Enter text here" 
+        onChange={(e) => handleChange(e)}
+        value={inputText}
+      ></textarea>
       <div>
         {isSubmitting === null && (
           <button className="btn btn-accent mt-4" onClick={handleSubmit}>Submit</button>
@@ -50,7 +64,10 @@ export default function Input() {
         {isSubmitting === true && (
           <div className="lds-facebook"><div></div><div></div><div></div></div>
         )}
+        {isSubmitting === false && (
+          <button className="btn mt-4" onClick={handleClear}>Clear and play again</button>
+        )}
       </div>
-    </>
+    </div>
   )
 }
