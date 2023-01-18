@@ -41,6 +41,8 @@ export default function Input() {
 
     const { status, output: { text } } = r.data
 
+    console.log('*', r.data)
+
     const a = {
       status,
       text,

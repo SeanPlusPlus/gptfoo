@@ -24,7 +24,7 @@ const handleInput = async (req, res) => {
     return
   }
 
-  const prompt = `Is this text written by a human or a large language model? ${inputText}`
+  const prompt = `Is this text written by a human or a large language model: ${inputText}`
 
   console.log(prompt);
 
@@ -42,6 +42,7 @@ const handleInput = async (req, res) => {
     received: inputText,
     output,
     status: getStatus(output.text),
+    prompt,
   })
 }
 
