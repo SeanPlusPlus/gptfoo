@@ -24,7 +24,7 @@ const handleInput = async (req, res) => {
     return
   }
 
-  const prompt = `Is the following text written by an ai or by a human being (it is okay if you do not know): "${inputText}"`
+  const prompt = `Is the following text written by a large language model or by a human (it is okay if you do not know): "${inputText}"`
 
   const baseCompletion = await openai.createCompletion({
     prompt,
