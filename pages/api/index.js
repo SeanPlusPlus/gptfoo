@@ -24,13 +24,13 @@ const handleInput = async (req, res) => {
     return
   }
 
-  const prompt = `Is this text written by a human or a large language model: ${inputText}`
+  const prompt = `Is the following text written by an ai or by a human being (it is okay if you do not know): "${inputText}"`
 
   const baseCompletion = await openai.createCompletion({
     prompt,
     model: 'text-davinci-003',
-    temperature: 0.2,
-    max_tokens: 250,
+    temperature: 0.1,
+    max_tokens: 256,
   });
   
   // The question object
