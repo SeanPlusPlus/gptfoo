@@ -26,8 +26,6 @@ const handleInput = async (req, res) => {
 
   const prompt = `Is this text written by a human or a large language model: ${inputText}`
 
-  console.log(prompt);
-
   const baseCompletion = await openai.createCompletion({
     prompt,
     model: 'text-davinci-003',
