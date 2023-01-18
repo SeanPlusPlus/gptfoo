@@ -32,9 +32,6 @@ const Nav = () => {
           <Link href="/" passHref>
             <button className="btn btn-outline normal-case text-xl md:ml-2" onClick={handleRefresh}>
               GPT Foo
-              <span role="img" aria-label="bot" className="ml-1">
-                🤖
-              </span>
             </button>
           </Link>
         </div>
