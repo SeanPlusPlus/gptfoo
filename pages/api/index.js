@@ -57,6 +57,10 @@ const getStatus = (text) => {
     return 'human'
   }
 
+  if (text.includes('Human')) {
+    return 'human'
+  }
+
   return 'ai'
 }
 
